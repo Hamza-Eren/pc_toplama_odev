@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### 🖥️ Bilgisayar Toplama Uygulaması
 
-## Getting Started
+Bu proje, **Balıkesir Üniversitesi Bilgisayar Mühendisliği**  
+**İleri İnternet Programlama** dersi kapsamında hazırlanmış bir ödevdir.
 
-First, run the development server:
+---
+
+#### 🎯 Amaç
+
+Kullanıcının donanım parçalarını seçerek **uyumlu bir bilgisayar sistemi oluşturmasını** sağlayan bir web uygulamasıdır.  
+Uygulama, farklı bileşenlerin (anakart, işlemci, RAM, ekran kartı, PSU, kasa vb.) teknik özelliklerini ve stok durumlarını kontrol eder.  
+Her adımda yalnızca **uyumlu parçalar** gösterilir ve seçilen ürünlerin toplam fiyatı otomatik hesaplanır.
+
+---
+
+#### ⚙️ Özellikler
+
+- 🔍 Marka, fiyat aralığı ve stok durumuna göre filtreleme  
+- 🔄 Parça seçimine göre **otomatik sekme geçişi**  
+- 🧩 CPU ↔ Anakart, RAM ↔ Anakart, GPU ↔ PSU gibi temel uyumluluk kontrolleri  
+- 💾 Seçimler **tarayıcıda (localStorage)** saklanır  
+- 📊 “Bitir” butonu ile seçilen parçaların özetini popup pencerede gösterir  
+- ⚡ Sade HTML + CSS düzeni (öğrenci dostu arayüz)
+
+---
+
+#### 🚀 Kurulum ve Çalıştırma
+
+Proje bir **Next.js (TypeScript)** uygulamasıdır.  
+Aşağıdaki adımları takip ederek yerel ortamda çalıştırabilirsiniz:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ardından tarayıcıda şu adresi açın:
+👉 http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### 📁 JSON Verileri
 
-## Learn More
+Tüm ürün verileri /public/data/ dizininde yer almaktadır.
+Bu dizinde işlemci, anakart, RAM, PSU, kasa, depolama ve çevre birimleri için ayrı JSON dosyaları bulunur.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### 🧠 Uygulama Akışı
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Kullanıcı önce anakart seçer.
+- Sistem bu seçime göre yalnızca uyumlu işlemcileri gösterir.
+- Ardından RAM, ekran kartı, PSU ve kasa seçimleri yapılır.
+- Tüm zorunlu parçalar seçildiğinde “Bitir” butonu aktifleşir.
+- Popup pencerede seçilen ürünlerin listesi ve toplam fiyat gösterilir.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### 🎥 Demo / GIF
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Aşağıda uygulamanın genel çalışma akışını gösteren kısa bir örnek bulunmaktadır:
+
+<p align="center"> <img src="./public/demo.gif" alt="Bilgisayar Toplama Uygulaması Demo" width="600"> </p>
