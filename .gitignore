@@ -39,3 +39,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE dosyaları
+.idea/
+.vscode/
+
+# OS junk
+Thumbs.db
+
+# Logs folder (bazı IDE'ler logs/ oluşturabilir)
+logs/
+
+# Public default icons (Next.js starter'dan)
+public/*.svg
+
+# (isteğe bağlı) build çıktıları
+dist/
